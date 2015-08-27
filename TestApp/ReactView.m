@@ -3,8 +3,6 @@
 
 @interface ReactView ()
 
-@property (nonatomic, strong) RCTRootView *rootView;
-
 @end
 
 
@@ -13,11 +11,11 @@
 #pragma mark ReactViewDelegate
 
 + (NSString *)jsFileName {
-    return @"";
+    return @"index";
 }
 
 + (NSString *)jsModuleName {
-    return @"";
+    return @"MyReactView";
 }
 
 + (NSString *)javaScriptHost {

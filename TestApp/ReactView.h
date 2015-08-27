@@ -11,7 +11,8 @@
 
 @end
 
-
 @interface ReactView : UIView <ReactViewDelegate>
+
+@property (nonatomic, strong) RCTRootView *rootView;
 
 @end
