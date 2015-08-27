@@ -9,11 +9,10 @@
 
 #import "ViewController.h"
 #import "MyReactView.h"
-
+#import "ReactViewCloser.h"
 
 @interface ViewController ()
 
-@property (nonatomic, strong) MyReactView *myReactView;
 @property (nonatomic, strong) UIButton *myButton;
 
 @end
@@ -25,7 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    [self.view addSubview:self.myReactView];
+    [self.view addSubview:self.reactView];
     [self.view addSubview:self.myButton];
 }
 
@@ -35,12 +34,13 @@
 }
 
 
-- (MyReactView *)myReactView {
-    if (_myReactView == nil) {
-        _myReactView = [[MyReactView alloc] initWithFrame:CGRectMake(0, 10, 320, 480)];
+- (ReactView *)reactView {
+    if (_reactView == nil) {
+        _reactView = [[ReactView alloc] initWithFrame:CGRectMake(0, 10, 320, 480)];
+       [(ReactViewCloser *)_reactView.rootView.bridge.modules[@"MyModule"] setViewController:self];
     }
 
-    return _myReactView;
+    return _reactView;
 }
 
 - (UIButton *)myButton {
@@ -56,20 +56,7 @@
 
 - (void)dismissViaNativeControl {
     NSLog(@"Hiding the react view via native IOS control.");
-    self.myReactView.hidden = !self.myReactView.isHidden;
+    self.reactView.hidden = !self.reactView.isHidden;
 }
-
-
-RCT_EXPORT_MODULE(MyModule);
-
-RCT_EXPORT_METHOD(dismissView){
-    NSLog(@"Hiding the react view via react native control.");
-    self.myReactView.hidden = YES;
-}
-
-- (dispatch_queue_t)methodQueue {
-    return dispatch_get_main_queue();
-}
-
 
 @end

@@ -7,12 +7,12 @@
 //
 
 
-#import <UIKit/UIKit.h>\
+#import <UIKit/UIKit.h>
 
-#import "RCTBridgeModule.h"
+#import "ReactView.h"
 
+@interface ViewController : UIViewController
 
-@interface ViewController : UIViewController <RCTBridgeModule>
-
+@property (nonatomic, strong) ReactView *reactView;
 
 @end
