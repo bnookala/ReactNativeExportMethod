@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3B89BAC71F66E232A6E680DA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB539CB0C2A42AD1C3F8DB8 /* libPods.a */; };
+		4C779A2C1BAA16C1009A46B7 /* ReactBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C779A2B1BAA16C1009A46B7 /* ReactBridge.m */; };
+		4C779A2F1BAA190E009A46B7 /* ViewControllerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C779A2E1BAA190E009A46B7 /* ViewControllerBridge.m */; };
 		4CD515211B8ECEC600C5B802 /* view.js in Resources */ = {isa = PBXBuildFile; fileRef = 4CD515201B8ECEC600C5B802 /* view.js */; };
-		551A71261B8FBC5B0092CE83 /* ReactViewCloser.m in Sources */ = {isa = PBXBuildFile; fileRef = 551A71251B8FBC5B0092CE83 /* ReactViewCloser.m */; };
 		F726F11E79A6D8A42EE99C7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F726F60FA45E725B05ED3421 /* main.m */; };
 		F726F1A186540B5C839AC7D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F726F43EA3BE86E1948572B9 /* Main.storyboard */; };
 		F726F656F5088F742AA93848 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F726FC94241A5B73C22C44BA /* LaunchScreen.xib */; };
@@ -32,9 +33,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C779A2A1BAA16C1009A46B7 /* ReactBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactBridge.h; sourceTree = "<group>"; };
+		4C779A2B1BAA16C1009A46B7 /* ReactBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactBridge.m; sourceTree = "<group>"; };
+		4C779A2D1BAA190E009A46B7 /* ViewControllerBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerBridge.h; sourceTree = "<group>"; };
+		4C779A2E1BAA190E009A46B7 /* ViewControllerBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerBridge.m; sourceTree = "<group>"; };
 		4CD515201B8ECEC600C5B802 /* view.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = view.js; path = ReactView/view.js; sourceTree = "<group>"; };
-		551A71241B8FBC5B0092CE83 /* ReactViewCloser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactViewCloser.h; sourceTree = "<group>"; };
-		551A71251B8FBC5B0092CE83 /* ReactViewCloser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactViewCloser.m; sourceTree = "<group>"; };
 		7623102B6CBE573CFE0F8010 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7DB539CB0C2A42AD1C3F8DB8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9F268C58126EF580AF697C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,8 +137,10 @@
 				F726F0D163CB86B4F1493686 /* ReactView.h */,
 				F726FE4BA6BE2542FAC6CD25 /* MyReactView.m */,
 				F726F28905899C598642B515 /* MyReactView.h */,
-				551A71241B8FBC5B0092CE83 /* ReactViewCloser.h */,
-				551A71251B8FBC5B0092CE83 /* ReactViewCloser.m */,
+				4C779A2A1BAA16C1009A46B7 /* ReactBridge.h */,
+				4C779A2B1BAA16C1009A46B7 /* ReactBridge.m */,
+				4C779A2D1BAA190E009A46B7 /* ViewControllerBridge.h */,
+				4C779A2E1BAA190E009A46B7 /* ViewControllerBridge.m */,
 			);
 			path = TestApp;
 			sourceTree = "<group>";
@@ -316,7 +321,8 @@
 				F726FB4721D30522A5DE8F1F /* AppDelegate.m in Sources */,
 				F726F6D69E9D73C121910223 /* ViewController.m in Sources */,
 				F726FD31E6819A00D7AF9ABF /* ReactView.m in Sources */,
-				551A71261B8FBC5B0092CE83 /* ReactViewCloser.m in Sources */,
+				4C779A2C1BAA16C1009A46B7 /* ReactBridge.m in Sources */,
+				4C779A2F1BAA190E009A46B7 /* ViewControllerBridge.m in Sources */,
 				F726FA011522CC3DF6D3CDC1 /* MyReactView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

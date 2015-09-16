@@ -61,7 +61,7 @@ var styles = StyleSheet.create({
 var MyReactView = React.createClass({
 
     onPress: function () {
-      React.NativeModules.MyModule.dismissView();
+      React.NativeModules.ViewControllerBridge.dismissView();
     },
 
     render: function () {
