@@ -1,4 +1,5 @@
 #import "ReactView.h"
+#import "ReactBridge.h"
 
 
 @interface ReactView ()
@@ -11,11 +12,11 @@
 #pragma mark ReactViewDelegate
 
 + (NSString *)jsFileName {
-    return @"index";
+    return @"";
 }
 
 + (NSString *)jsModuleName {
-    return @"MyReactView";
+    return @"";
 }
 
 + (NSString *)javaScriptHost {
@@ -88,8 +89,20 @@
                                                     moduleName:[[self class] jsModuleName]
                                                  launchOptions:nil];
 
+        self.rootView.backgroundColor = [UIColor clearColor];
         self.rootView.frame = frame;
         [self addSubview:self.rootView];
+    }
+
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+               viewController:(UIViewController *)controller
+                 bridgeModule:(NSString *)bridgeModule {
+
+    if (self = [self initWithFrame:frame]) {
+        ((ReactBridge *)self.rootView.bridge.modules[bridgeModule]).viewController = controller;
     }
 
     return self;

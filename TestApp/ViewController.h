@@ -14,5 +14,6 @@
 @interface ViewController : UIViewController
 
 @property (nonatomic, strong) ReactView *reactView;
+@property (nonatomic, strong) UIButton *myButton;
 
 @end

@@ -8,17 +8,11 @@
 
 
 #import "ViewController.h"
+#import "ViewControllerBridge.h"
 #import "MyReactView.h"
-#import "ReactViewCloser.h"
 
-@interface ViewController ()
-
-@property (nonatomic, strong) UIButton *myButton;
-
-@end
 
 @implementation ViewController
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,8 +30,10 @@
 
 - (ReactView *)reactView {
     if (_reactView == nil) {
-        _reactView = [[ReactView alloc] initWithFrame:CGRectMake(0, 10, 320, 480)];
-       [(ReactViewCloser *)_reactView.rootView.bridge.modules[@"MyModule"] setViewController:self];
+        _reactView = [[MyReactView alloc]
+                      initWithFrame:CGRectMake(0, 10, 320, 480)
+                      viewController:self
+                      bridgeModule:[ViewControllerBridge bridgeName]];
     }
 
     return _reactView;
